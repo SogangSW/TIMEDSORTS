@@ -19,7 +19,7 @@ private:
 	int comparisons;
 	clock_t q_timeS;			//start clock
 	clock_t q_timeE;			//end clock
-	double q_time_Spent;		
+	double q_time_Spent;
 };
 
 QuickSort::QuickSort()

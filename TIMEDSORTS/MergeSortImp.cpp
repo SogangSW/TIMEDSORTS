@@ -62,7 +62,6 @@ void MergeSort::merge(int arr[], int a, int b, int c)
 	}
 }
 
-
 void MergeSort::mergeSort(int arr[], int z, int x)
 {
 	if (z < x)

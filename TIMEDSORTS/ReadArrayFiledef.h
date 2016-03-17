@@ -24,10 +24,8 @@ private:
 
 ReadArrayFile::ReadArrayFile()
 {
-
 }
 
 ReadArrayFile::~ReadArrayFile()
 {
-
 }

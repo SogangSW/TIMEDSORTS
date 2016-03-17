@@ -39,5 +39,4 @@ void QuickSort::quickSort(int arr[], int start, int end)
 		quickSort(arr, start, pi - 1);
 		quickSort(arr, pi + 1, end);
 	}
-	
 }

@@ -28,7 +28,8 @@
     <ClCompile Include="HeapSortImp.cpp" />
     <ClCompile Include="MergeSortImp.cpp" />
     <ClCompile Include="QuickSortImp.cpp" />
-    <ClCompile Include="ReadArrayFileImpcpp.cpp" />
+    <ClCompile Include="ReadArrayFileImp.cpp" />
+    <ClCompile Include="TimedFileSortMain.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8D411DED-41CB-44C5-A2B4-B1B8F3C155F0}</ProjectGuid>

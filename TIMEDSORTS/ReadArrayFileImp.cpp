@@ -39,6 +39,4 @@ long readIntoSort(char *fileName, long howMany)
 	qs_Obj.quickSort(copyArray, 0, howMany - 1);
 
 	return 0;
-
-	
 }

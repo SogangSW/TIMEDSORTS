@@ -38,7 +38,10 @@
     <ClCompile Include="QuickSortImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ReadArrayFileImpcpp.cpp">
+    <ClCompile Include="TimedFileSortMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadArrayFileImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

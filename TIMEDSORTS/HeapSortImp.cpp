@@ -55,7 +55,6 @@ void HeapSort::heapSort(int *q_array, int size)
 	}
 }
 
-
 void HeapSort::swap(int* a, int *b)
 {
 	int temp = *a;
