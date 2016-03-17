@@ -15,6 +15,8 @@ public:
 	void mergeSort(int arr[], int z, int x);
 	void setMergeTime(double m_Time);
 	int getMergeTime();
+	void setComparisons(int comp);
+	int getComparisons();
 private:
 	int comparisons;
 	clock_t m_timeS;			//start clock

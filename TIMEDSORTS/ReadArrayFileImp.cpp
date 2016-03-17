@@ -14,7 +14,7 @@ long readIntoSort(char *fileName, long howMany)
 	aFile.open(fileName);
 	if (!aFile)
 	{
-		cout << "Error opening file";
+		cout << "Error opening file\n";
 	}
 
 	int *yourArray = new int[howMany];

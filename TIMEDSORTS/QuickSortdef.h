@@ -15,6 +15,8 @@ public:
 	void quickSort(int arr[], int start, int end);
 	void setQuickTime(double q_Time);
 	int getQuickTime();
+	void setComparisons(int comp);
+	int getComparisons();
 private:
 	int comparisons;
 	clock_t q_timeS;			//start clock

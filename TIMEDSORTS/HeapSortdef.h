@@ -17,6 +17,8 @@ public:
 	void heapSort(int* q_array, int size);
 	void setHeapTime(double h_Time);
 	int getHeapTime();
+	void setComparisons(int comp);
+	int getComparisons();
 private:
 	int comparisons;
 	clock_t h_timeS;			//start clock

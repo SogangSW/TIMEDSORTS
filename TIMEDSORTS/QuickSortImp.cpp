@@ -21,6 +21,7 @@ int QuickSort::partition(int arr[], int start, int end)
 		// equal to pivot
 		if (arr[j] <= pivot)
 		{
+			comparisons++;
 			i++;
 			swap(&arr[i], &arr[j]);
 		}
