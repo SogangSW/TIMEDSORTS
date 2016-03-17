@@ -21,13 +21,13 @@ private:
 	int comparisons;
 	clock_t h_timeS;			//start clock
 	clock_t h_timeE;			//end clock
-	double time_Spent;
+	double h_time_Spent;
 };
 
 HeapSort::HeapSort()
 {
 	comparisons = 0;
-	time_Spent = 0;
+	h_time_Spent = 0;
 }
 
 HeapSort::~HeapSort()

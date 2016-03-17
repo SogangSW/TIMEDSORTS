@@ -19,13 +19,13 @@ private:
 	int comparisons;
 	clock_t m_timeS;			//start clock
 	clock_t m_timeE;			//end clock
-	double time_Spent;
+	double m_time_Spent;
 };
 
 MergeSort::MergeSort()
 {
 	comparisons = 0;
-	time_Spent = 0;
+	m_time_Spent = 0;
 }
 
 MergeSort::~MergeSort()
