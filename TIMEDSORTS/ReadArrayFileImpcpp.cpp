@@ -29,6 +29,16 @@ long readIntoSort(char *fileName, long howMany)
 	memcpy(copyArray, yourArray, howMany*sizeof(int));
 	HeapSort hs_Obj;
 	hs_Obj.heapSort(copyArray, howMany);
+	int *copyArray = new int[howMany];
+	memcpy(copyArray, yourArray, howMany*sizeof(int));
+	MergeSort ms_Obj;
+	ms_Obj.mergeSort(copyArray, 0, howMany - 1);
+	int *copyArray = new int[howMany];
+	memcpy(copyArray, yourArray, howMany*sizeof(int));
+	QuickSort qs_Obj;
+	qs_Obj.quickSort(copyArray, 0, howMany - 1);
+
+	return 0;
 
 	
 }
