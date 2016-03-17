@@ -15,10 +15,12 @@ public:
 	void m_Heapify(struct MaxHeap* maxHeap, int index);
 	struct MaxHeap* makeHeap(int *t_array, int size);
 	void heapSort(int* q_array, int size);
+	void setHeapTime(double h_Time);
+	int getHeapTime();
 private:
 	int comparisons;
-	clock_t timeS;			//start clock
-	clock_t timeE;			//end clock
+	clock_t h_timeS;			//start clock
+	clock_t h_timeE;			//end clock
 	double time_Spent;
 };
 

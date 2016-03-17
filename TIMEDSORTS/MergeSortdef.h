@@ -13,10 +13,12 @@ public:
 	~MergeSort();
 	void merge(int arr[], int a, int b, int c);
 	void mergeSort(int arr[], int z, int x);
+	void setMergeTime(double m_Time);
+	int getMergeTime();
 private:
 	int comparisons;
-	clock_t timeS;			//start clock
-	clock_t timeE;			//end clock
+	clock_t m_timeS;			//start clock
+	clock_t m_timeE;			//end clock
 	double time_Spent;
 };
 

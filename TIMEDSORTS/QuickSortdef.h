@@ -13,10 +13,12 @@ public:
 	void swap(int* a, int* b);
 	int partition(int arr[], int start, int end);
 	void quickSort(int arr[], int start, int end);
+	void setQuickTime(double q_Time);
+	int getQuickTime();
 private:
 	int comparisons;
-	clock_t timeS;			//start clock
-	clock_t timeE;			//end clock
+	clock_t q_timeS;			//start clock
+	clock_t q_timeE;			//end clock
 	double time_Spent;		
 };
 
