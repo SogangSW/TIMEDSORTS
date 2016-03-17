@@ -74,3 +74,23 @@ void MergeSort::mergeSort(int arr[], int z, int x)
 		merge(arr, z, m, x);
 	}
 }
+
+void MergeSort::setComparisons(int comp)
+{
+	this->comparisons = comp;
+}
+
+int MergeSort::getComparisons()
+{
+	return this->comparisons;
+}
+
+void MergeSort::setMergeTime(double m_Time)
+{
+	this->m_time_Spent = m_Time;
+}
+
+double MergeSort::getMergeTime()
+{
+	return this->m_time_Spent;
+}

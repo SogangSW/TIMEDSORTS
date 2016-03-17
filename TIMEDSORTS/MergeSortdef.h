@@ -14,7 +14,7 @@ public:
 	void merge(int arr[], int a, int b, int c);
 	void mergeSort(int arr[], int z, int x);
 	void setMergeTime(double m_Time);
-	int getMergeTime();
+	double getMergeTime();
 	void setComparisons(int comp);
 	int getComparisons();
 private:

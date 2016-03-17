@@ -41,3 +41,23 @@ void QuickSort::quickSort(int arr[], int start, int end)
 		quickSort(arr, pi + 1, end);
 	}
 }
+
+void QuickSort::setComparisons(int comp)
+{
+	this->comparisons = comp;
+}
+
+int QuickSort::getComparisons()
+{
+	return this->comparisons;
+}
+
+void QuickSort::setQuickTime(double q_Time)
+{
+	this->q_time_Spent = q_Time;
+}
+
+double QuickSort::getQuickTime()
+{
+	return this->q_time_Spent;
+}

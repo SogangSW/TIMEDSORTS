@@ -16,7 +16,7 @@ public:
 	struct MaxHeap* makeHeap(int *t_array, int size);
 	void heapSort(int* q_array, int size);
 	void setHeapTime(double h_Time);
-	int getHeapTime();
+	double getHeapTime();
 	void setComparisons(int comp);
 	int getComparisons();
 private:

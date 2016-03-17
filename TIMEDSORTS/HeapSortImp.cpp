@@ -61,3 +61,25 @@ void HeapSort::swap(int* a, int *b)
 	*a = *b;
 	*b = temp;
 }
+
+void HeapSort::setComparisons(int comp)
+{
+	this->comparisons = comp;
+}
+
+int HeapSort::getComparisons()
+{
+	return this->comparisons;
+}
+
+void HeapSort::setHeapTime(double h_Time)
+{
+	this->h_time_Spent = h_Time;
+}
+
+double HeapSort::getHeapTime()
+{
+	return this->h_time_Spent;
+}
+
+	

@@ -14,7 +14,7 @@ public:
 	int partition(int arr[], int start, int end);
 	void quickSort(int arr[], int start, int end);
 	void setQuickTime(double q_Time);
-	int getQuickTime();
+	double getQuickTime();
 	void setComparisons(int comp);
 	int getComparisons();
 private:
