@@ -1,6 +1,3 @@
-#ifdef _MSC_VER
-#define _CRT_SECURE_NO_WARNINGS
-#endif
 #include "QuickSortdef.h"
 
 void QuickSort::swap(int* a, int* b)
@@ -14,8 +11,8 @@ int QuickSort::partition(int arr[], int start, int end)
 {
 	int pivot = arr[end];		//pivot
 	int i = (start - 1); //index of smaller element
-
-	for (int j = start; j <= end - 1; j++)
+	 
+	for (int j = start; j < end - 1; j++)
 	{
 		// If current element is smaller than or
 		// equal to pivot

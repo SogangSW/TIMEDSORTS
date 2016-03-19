@@ -1,6 +1,3 @@
-#ifdef _MSC_VER
-#define _CRT_SECURE_NO_WARNINGS
-#endif
 #include "HeapSortdef.h"
 struct MaxHeap
 {
@@ -81,5 +78,3 @@ double HeapSort::getHeapTime()
 {
 	return this->h_time_Spent;
 }
-
-	

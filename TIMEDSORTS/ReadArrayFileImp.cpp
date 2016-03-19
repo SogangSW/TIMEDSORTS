@@ -1,13 +1,9 @@
-#ifdef _MSC_VER
-#define _CRT_SECURE_NO_WARNINGS
-#endif
-
 #include "ReadArrayFiledef.h"
 #include "HeapSortdef.h"
 #include "MergeSortdef.h"
 #include "QuickSortdef.h"
 
-long readIntoSort(char *fileName, long howMany)
+long ReadArrayFile::readIntoSort(char *fileName, long howMany)
 {
 	int holdNum;
 	ifstream aFile;
@@ -28,15 +24,15 @@ long readIntoSort(char *fileName, long howMany)
 	int *copyArray = new int[howMany];
 	memcpy(copyArray, yourArray, howMany*sizeof(int));
 	HeapSort hs_Obj;
-	hs_Obj.heapSort(copyArray, howMany);
-	int *copyArray = new int[howMany];
-	memcpy(copyArray, yourArray, howMany*sizeof(int));
-	MergeSort ms_Obj;
-	ms_Obj.mergeSort(copyArray, 0, howMany - 1);
-	int *copyArray = new int[howMany];
+	hs_Obj.heapSort(copyArray, howMany - 1);
+	//memcpy(copyArray, yourArray, howMany*sizeof(int));
+	//MergeSort ms_Obj;
+	//ms_Obj.mergeSort(copyArray, 0, howMany - 1);
 	memcpy(copyArray, yourArray, howMany*sizeof(int));
 	QuickSort qs_Obj;
 	qs_Obj.quickSort(copyArray, 0, howMany - 1);
+	delete[] copyArray;
+	delete[] yourArray;
 
 	return 0;
 }
