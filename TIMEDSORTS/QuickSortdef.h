@@ -9,7 +9,6 @@ public:
 	QuickSort();
 	~QuickSort();
 	void swap(int* a, int* b);
-	int partition(int arr[], int start, int end);
 	void quickSort(int arr[], int start, int end);
 	void setQuickTime(double q_Time);
 	double getQuickTime();
