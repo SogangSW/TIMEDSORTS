@@ -1,78 +1,54 @@
 #include "MergeSortdef.h"
 
-void MergeSort::merge(int arr[], int a, int b, int c)
+int MergeSort::min(int x, int y)
 {
-	int num1 = c - a + 1;
-	int num2 = b - a;
+	return (x < y) ? x : y;
+}
 
-	int *L = NULL;
-	int *R = NULL;
+void MergeSort::merge(int arr[], int a, int b)
+{
+	int mid = floor((a + b) / 2);
+	int i1 = 0;
+	int i2 = a;
+	int i3 = mid + 1;
+	int *temp = NULL;
+	
 
-	L = new int[num1];
-	R = new int[num2];
+	temp = new int[b - a + 1];
 
-	for (int i = 0; i < num1; i++)
+	while (i2 <= mid && i3 <= b)
 	{
-		L[i] = arr[a + 1];
-	}
-
-	for (int j = 0; j < num2; j++)
-	{
-		R[j] = arr[c + 1 + j];
-	}
-
-	int z = 0;		//Initial index of first subarray
-	int x = 0;		//Initial index of second subarray
-	int p = a;		//Initial index of merged subarray
-
-	while (z < num1 && x < num2)
-	{
-		if (L[z] <= R[x])
+		if (arr[i2] < arr[i3])
 		{
-			arr[p] = L[z];
-			z++;
+			temp[i1++] = arr[i2++];
 		}
 		else
 		{
-			arr[p] = R[x];
-			x++;
+			arr[i1++] = arr[i3++];
 		}
-		p++;			
 	}
-
-	/* Copy the remaining elements of L[], if there
-	are any */
-	while (z < num1)
+	
+	while (i3 < b)
 	{
-		arr[p] = L[z];
-		z++;
-		p++;
+		temp[i1++] = arr[i3++];
 	}
-
-	/* Copy the remaining elements of R[], if there
-	are any */
-	while (x < num2)
+	for (int i = a; i <= b; i++)
 	{
-		arr[p] = R[x];
-		x++;
-		p++;
+		arr[i] = temp[i - a];
 	}
-	delete[] L;	
-	delete[] R;
+	delete[] temp;	
+	
 }
 
 void MergeSort::mergeSort(int arr[], int z, int x)
 {
 	if (z < x)
 	{
-		int m = z + x / 2;
-
-		mergeSort(arr, z, m);
-		mergeSort(arr, m + 1, x);
-
-		merge(arr, z, m, x);
+		int mid = floor((z + x) / 2);
+		mergeSort(arr, z, mid);
+		mergeSort(arr, mid + 1, x);
+		merge(arr, z, x);
 	}
-	return;
 }
 
 void MergeSort::setComparisons(int comp)

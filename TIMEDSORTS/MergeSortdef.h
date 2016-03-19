@@ -4,13 +4,15 @@
 #include <stdlib.h>
 #include <time.h>
 #include <conio.h>
+#include <cmath>
 
 class MergeSort
 {
 public:
 	MergeSort();
 	~MergeSort();
-	void merge(int arr[], int a, int b, int c);
+	void merge(int arr[], int a, int b);
+	int min(int x, int y);
 	void mergeSort(int arr[], int z, int x);
 	void setMergeTime(double m_Time);
 	double getMergeTime();
