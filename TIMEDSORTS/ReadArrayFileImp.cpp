@@ -2,7 +2,8 @@
 #include "HeapSortdef.h"
 #include "MergeSortdef.h"
 #include "QuickSortdef.h"
-
+using std::cout;
+using std::endl;
 long ReadArrayFile::readIntoSort(char *fileName, long howMany)
 {
 	int holdNum;
