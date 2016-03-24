@@ -5,6 +5,7 @@
 #include <time.h>
 #include <conio.h>
 #include <cmath>
+#include <iostream>
 
 class MergeSort
 {

@@ -23,7 +23,7 @@
 int main(void)
 {
 	ReadArrayFile sortFile;
-	cout << "Sorting list of 10 numbers\n";
+	cout << "Sorting list of 10 numbers.\n";
 	sortFile.readIntoSort(FILE_NAME_10, LIST_SIZE_10);
 	cout << "Sorting list of 100 numbers.\n";
 	sortFile.readIntoSort(FILE_NAME_100, LIST_SIZE_100);

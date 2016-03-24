@@ -11,6 +11,8 @@ long ReadArrayFile::readIntoSort(char *fileName, long howMany)
 	if (!aFile)
 	{
 		cout << "Error opening file\n";
+		getchar();
+		return 0;
 	}
 
 	int *yourArray = new int[howMany];
@@ -26,14 +28,17 @@ long ReadArrayFile::readIntoSort(char *fileName, long howMany)
 	HeapSort hs_Obj;
 	hs_Obj.heapSort(copyArray, howMany - 1);
 	cout << "Number of comparisons: " << hs_Obj.getComparisons() << endl;
+
 	memcpy(copyArray, yourArray, howMany*sizeof(int));
 	MergeSort ms_Obj;
 	ms_Obj.mergeSort(copyArray, 0, howMany - 1);
 	cout << "Number of comparisons: " << ms_Obj.getComparisons() << endl;
+
 	memcpy(copyArray, yourArray, howMany*sizeof(int));
 	QuickSort qs_Obj;
 	qs_Obj.quickSort(copyArray, 0, howMany - 1);
 	cout << "Number of comparisons: " << qs_Obj.getComparisons() << endl;
+
 	delete[] copyArray;
 	delete[] yourArray;
 
