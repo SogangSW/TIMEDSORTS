@@ -41,6 +41,7 @@ void QuickSort::quickSort(int arr[], int start, int end)
 	{
 		quickSort(arr, i, end);
 	}
+	setComparisons(comparisons);
 }
 
 void QuickSort::setComparisons(int comp)

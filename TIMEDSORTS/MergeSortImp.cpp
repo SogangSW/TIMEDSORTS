@@ -47,6 +47,7 @@ void MergeSort::mergeSort(int arr[], int z, int x)
 		mergeSort(arr, mid + 1, x);
 		merge(arr, z, x);
 	}
+	setComparisons(comparisons);
 }
 
 void MergeSort::setComparisons(int comp)
