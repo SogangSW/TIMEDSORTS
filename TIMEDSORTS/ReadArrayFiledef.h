@@ -6,7 +6,6 @@
 #include <stdio.h>
 
 using std::cout;
-using std::endl;
 using std::ifstream;
 class ReadArrayFile
 {

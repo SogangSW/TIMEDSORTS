@@ -12,7 +12,7 @@ void MergeSort::merge(int arr[], int a, int b)
 	int i2 = a;
 	int i3 = mid + 1;
 	int *temp = NULL;
-
+	
 	temp = new int[b - a + 1];
 
 	while (i2 <= mid && i3 <= b)
@@ -26,7 +26,7 @@ void MergeSort::merge(int arr[], int a, int b)
 			arr[i1++] = arr[i3++];
 		}
 	}
-
+	
 	while (i3 < b)
 	{
 		temp[i1++] = arr[i3++];
@@ -35,7 +35,7 @@ void MergeSort::merge(int arr[], int a, int b)
 	{
 		arr[i] = temp[i - a];
 	}
-	delete[] temp;
+	delete[] temp;	
 }
 
 void MergeSort::mergeSort(int arr[], int z, int x)
@@ -46,9 +46,7 @@ void MergeSort::mergeSort(int arr[], int z, int x)
 		mergeSort(arr, z, mid);
 		mergeSort(arr, mid + 1, x);
 		merge(arr, z, x);
-		comparisons++;
 	}
-
 	setComparisons(comparisons);
 }
 
