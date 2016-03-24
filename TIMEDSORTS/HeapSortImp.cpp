@@ -50,7 +50,6 @@ void HeapSort::heapSort(int *q_array, int size)
 		swap(&maxHeap->array[0], &maxHeap->array[maxHeap->a_size - 1]);
 		comparisons++;
 	}
-	setComparisons(comparisons);
 }
 
 void HeapSort::swap(int* a, int *b)
