@@ -14,6 +14,7 @@ void QuickSort::quickSort(int arr[], int start, int end)
 	int tmp;
 	int pivot = arr[(start + end) / 2];
 
+	q_timeS = clock();
 	while (i <= j)
 	{
 		comparisons++;
@@ -42,6 +43,9 @@ void QuickSort::quickSort(int arr[], int start, int end)
 	{
 		quickSort(arr, i, end);
 	}
+	q_timeE = clock();
+	q_time_Spent = (float)(q_timeE - q_timeS) / CLOCKS_PER_SEC;
+	setQuickTime(q_time_Spent);
 	setComparisons(comparisons);
 }
 
@@ -55,12 +59,12 @@ int QuickSort::getComparisons()
 	return this->comparisons;
 }
 
-void QuickSort::setQuickTime(double q_Time)
+void QuickSort::setQuickTime(float q_Time)
 {
 	this->q_time_Spent = q_Time;
 }
 
-double QuickSort::getQuickTime()
+float QuickSort::getQuickTime()
 {
 	return this->q_time_Spent;
 }

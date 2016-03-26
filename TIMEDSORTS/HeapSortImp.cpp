@@ -48,6 +48,7 @@ void HeapSort::buildMaxHeap(int arr[], int size)
 void HeapSort::heapSort(int *q_array, int size)
 {
 	int heapsize = size;
+	h_timeS = clock();
 	buildMaxHeap(q_array, size);
 	for (int i = size - 1; i >= 1; i--)
 	{
@@ -56,6 +57,9 @@ void HeapSort::heapSort(int *q_array, int size)
 		heapsize--;
 		m_Heapify(q_array, heapsize, 0);
 	}
+	h_timeE = clock();
+	h_time_Spent = (float)(h_timeE - h_timeS) / CLOCKS_PER_SEC;
+	setHeapTime(h_time_Spent);
 	setComparisons(comparisons);
 }
 
@@ -69,12 +73,12 @@ int HeapSort::getComparisons()
 	return this->comparisons;
 }
 
-void HeapSort::setHeapTime(double h_Time)
+void HeapSort::setHeapTime(float h_Time)
 {
 	this->h_time_Spent = h_Time;
 }
 
-double HeapSort::getHeapTime()
+float HeapSort::getHeapTime()
 {
 	return this->h_time_Spent;
 }

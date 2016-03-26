@@ -42,14 +42,21 @@ void MergeSort::merge(int arr[], int a, int b)
 
 void MergeSort::mergeSort(int arr[], int z, int x)
 {
+	m_timeS = clock();
 	if (z < x)
 	{
+		
 		comparisons++;
 		int mid = floor((z + x) / 2);
 		mergeSort(arr, z, mid);
 		mergeSort(arr, mid + 1, x);
 		merge(arr, z, x);
+		
 	}
+	m_timeE = clock();
+
+	m_time_Spent = (float)(m_timeE - m_timeS) / CLOCKS_PER_SEC;
+	setMergeTime(m_time_Spent);
 	setComparisons(comparisons);
 }
 
@@ -63,12 +70,12 @@ int MergeSort::getComparisons()
 	return this->comparisons;
 }
 
-void MergeSort::setMergeTime(double m_Time)
+void MergeSort::setMergeTime(float m_Time)
 {
 	this->m_time_Spent = m_Time;
 }
 
-double MergeSort::getMergeTime()
+float MergeSort::getMergeTime()
 {
 	return this->m_time_Spent;
 }

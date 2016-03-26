@@ -11,8 +11,8 @@ public:
 	~QuickSort();
 	void swap(int* a, int* b);
 	void quickSort(int arr[], int start, int end);
-	void setQuickTime(double q_Time);
-	double getQuickTime();
+	void setQuickTime(float q_Time);
+	float getQuickTime();
 	void setComparisons(int comp);
 	int getComparisons();
 private:

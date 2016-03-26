@@ -14,8 +14,8 @@ public:
 	void merge(int arr[], int a, int b);
 	int min(int x, int y);
 	void mergeSort(int arr[], int z, int x);
-	void setMergeTime(double m_Time);
-	double getMergeTime();
+	void setMergeTime(float m_Time);
+	float getMergeTime();
 	void setComparisons(int comp);
 	int getComparisons();
 private:

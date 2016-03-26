@@ -14,8 +14,8 @@ public:
 	void m_Heapify(int arr[], int i, int n);
 	void buildMaxHeap(int arr[], int n);
 	void heapSort(int* q_array, int size);
-	void setHeapTime(double h_Time);
-	double getHeapTime();
+	void setHeapTime(float h_Time);
+	float getHeapTime();
 	void setComparisons(int comp);
 	int getComparisons();
 private:
