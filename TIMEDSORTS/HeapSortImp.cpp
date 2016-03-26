@@ -5,59 +5,58 @@ struct MaxHeap
 	int* array;
 };
 
-void HeapSort::m_Heapify(struct MaxHeap* maxHeap, int index)
+void HeapSort::swap(int& a, int& b)
 {
-	int largest = index;
-	int left = (index << 1) + 1;
-	int right = (index + 1) << 1;
+	int temp;
+	temp = a;
+	a = b;
+	b = temp;
+}
 
-	if (left < maxHeap->a_size && maxHeap->array[left] > maxHeap->array[largest])
+void HeapSort::m_Heapify(int arr[], int i, int n)
+{
+	int left = 2 * n + 1;
+	int right = 2 * n + 2;
+	int largest;
+
+	if ((left < i) && (arr[left] > arr[n]))
 	{
 		largest = left;
 	}
-
-	if (right < maxHeap->a_size && maxHeap->array[right] > maxHeap->array[largest])
+	else
+	{
+		largest = n;
+	}
+	if ((right < i) && (arr[right] > arr[largest]))
 	{
 		largest = right;
 	}
-
-	if (largest != index)
+	if (largest != n)
 	{
-		swap(&maxHeap->array[largest], &maxHeap->array[index]);
-		m_Heapify(maxHeap, largest);
+		swap(arr[n], arr[largest]);
+		m_Heapify(arr, i, largest);
 	}
 }
 
-struct MaxHeap* HeapSort::makeHeap(int *t_array, int size)
+void HeapSort::buildMaxHeap(int arr[], int size)
 {
-	struct MaxHeap* maxHeap = (struct MaxHeap*) malloc(sizeof(struct MaxHeap));
-	maxHeap->a_size = size;
-	maxHeap->array = t_array;
-
-	for (int i = (maxHeap->a_size - 2) / 2; i >= 0; --i)
+	for (double i = floor((size / 2)); i >= 0; i--)
 	{
-		m_Heapify(maxHeap, i);
+		m_Heapify(arr, size, i);
 	}
-
-	return maxHeap;
 }
 void HeapSort::heapSort(int *q_array, int size)
 {
-	struct MaxHeap* maxHeap = makeHeap(q_array, size);
-
-	while (maxHeap->a_size > 1)
+	int heapsize = size;
+	buildMaxHeap(q_array, size);
+	for (int i = size - 1; i >= 1; i--)
 	{
-		swap(&maxHeap->array[0], &maxHeap->array[maxHeap->a_size - 1]);
 		comparisons++;
+		swap(q_array[0], q_array[i]);
+		heapsize--;
+		m_Heapify(q_array, heapsize, 0);
 	}
 	setComparisons(comparisons);
-}
-
-void HeapSort::swap(int* a, int *b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
 }
 
 void HeapSort::setComparisons(int comp)

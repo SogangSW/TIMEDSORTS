@@ -10,9 +10,9 @@ class HeapSort
 public:
 	HeapSort();
 	~HeapSort();
-	void swap(int *a, int* b);
-	void m_Heapify(struct MaxHeap* maxHeap, int index);
-	struct MaxHeap* makeHeap(int *t_array, int size);
+	void swap(int& a, int& b);
+	void m_Heapify(int arr[], int i, int n);
+	void buildMaxHeap(int arr[], int n);
 	void heapSort(int* q_array, int size);
 	void setHeapTime(double h_Time);
 	double getHeapTime();

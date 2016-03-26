@@ -16,6 +16,7 @@ void QuickSort::quickSort(int arr[], int start, int end)
 
 	while (i <= j)
 	{
+		comparisons++;
 		while (arr[i] < pivot)
 		{
 			i++;

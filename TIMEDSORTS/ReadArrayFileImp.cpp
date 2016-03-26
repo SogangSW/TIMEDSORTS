@@ -27,7 +27,7 @@ long ReadArrayFile::readIntoSort(char *fileName, long howMany)
 	int *copyArray = new int[howMany];
 	memcpy(copyArray, yourArray, howMany*sizeof(int));
 	HeapSort hs_Obj;
-	hs_Obj.heapSort(copyArray, howMany - 1);
+	hs_Obj.heapSort(copyArray, howMany);
 	cout << "Number of comparisons: " << hs_Obj.getComparisons() << endl;
 	memcpy(copyArray, yourArray, howMany*sizeof(int));
 	MergeSort ms_Obj;
