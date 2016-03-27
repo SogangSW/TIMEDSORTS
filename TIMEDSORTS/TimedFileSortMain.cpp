@@ -1,6 +1,3 @@
-#include "HeapSortdef.h"
-#include "MergeSortdef.h"
-#include "QuickSortdef.h"
 #include "ReadArrayFiledef.h"
 #include <iostream>
 #include <stdlib.h>
