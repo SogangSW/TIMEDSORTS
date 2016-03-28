@@ -22,7 +22,7 @@ private:
 	int comparisons;
 	clock_t h_timeS;			//start clock
 	clock_t h_timeE;			//end clock
-	double h_time_Spent;
+	float h_time_Spent;
 };
 
 HeapSort::HeapSort()

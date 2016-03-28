@@ -22,7 +22,7 @@ private:
 	int comparisons;
 	clock_t m_timeS;			//start clock
 	clock_t m_timeE;			//end clock
-	double m_time_Spent;
+	float m_time_Spent;
 };
 
 MergeSort::MergeSort()
